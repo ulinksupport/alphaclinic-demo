@@ -1,4 +1,4 @@
-as per 31-October-2025 Status
+as per 03-November-2025 Status
 -----------------------------
 
 1. what has been done
@@ -40,16 +40,17 @@ as per 31-October-2025 Status
 	1.17. Create User Record & asssign assistant Integration (FE + BE)
 	
 	1.18. Listing user record integration
-			
+
+	1.19. Integration delete user record API = left with the API		
 			
 
 
 2. what is current action
 			 
 			(Hadi)
-			2.1. Integration delete user record API = left with the API
-			2.2. Create edit form user & assistant like (create mode), but edit form UI. = in-progress almost done on UI Part
-			2.3. Edit API & Integration it.	
+			
+			2.1. Create edit form user & assistant like (create mode), but edit form UI. = in-progress almost done on UI Part
+			2.2. Edit API & Integration it.	
 	
 	
 3. what is next
