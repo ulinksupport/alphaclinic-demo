@@ -338,7 +338,7 @@ async function doStreamChatV2(req, res) {
         instructions: systemPromptIns,
         input: [
             { role: 'system', content: 'Answer strictly from your system knowledge.' },
-            ...history.slice(-4),
+            ...history,
             { 
               role: 'user', 
               content: content,  
