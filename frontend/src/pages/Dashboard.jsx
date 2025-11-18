@@ -370,17 +370,6 @@ export default function Dashboard() {
                   Logout
                 </button>
 
-                {/* Refresh Allianz button - visible only when Allianz CSO iframe is selected */}
-                {botKey === LINDY_IFRAME_ASSISTANT.key && (
-                  <button
-                    className="button ghost"
-                    onClick={() => setIframeRefreshKey((k) => k + 1)}
-                    title="Reload the Allianz iframe"
-                  >
-                    Refresh Allianz
-                  </button>
-                )}
-
                 <button
                   className="button ghost"
                   disabled={!sessionId}
@@ -447,7 +436,9 @@ export default function Dashboard() {
 
                 <input
                   className="input input-message"
-                  placeholder={!botKey ? "Choose an assistant first" : "Type a message…"}
+                  placeholder={
+                    !botKey ? "Choose an assistant first" : "Type a message…"
+                  }
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   disabled={!botKey || !sessionId || sendDisabled || uploading}
