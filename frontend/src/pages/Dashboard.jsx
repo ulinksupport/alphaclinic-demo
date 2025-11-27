@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getToken, clearAuth, getUser } from "../api";
 
 const ALPHA_IFRAME_URL =
-  "https://chat.lindy.ai/embedded/lindyEmbed/744de731-56c5-4a9c-ba48-3175a50a48e1";
+  "https://chat.lindy.ai/embed/6923e2271b8eea1141106520";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -166,11 +166,11 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* MAIN AREA – MAXIMIZED IFRAME */}
+      {/* MAIN AREA – NEW IFRAME */}
       <main
         style={{
           flex: 1,
-          padding: "0px 0px", // gives FULL usage space
+          padding: "0px 0px",
           display: "flex",
           flexDirection: "column",
         }}
@@ -186,7 +186,7 @@ export default function Dashboard() {
               "0 28px 80px rgba(0,0,0,0.85), 0 0 0 1px rgba(148,163,184,0.2)",
             border: "1px solid rgba(15, 23, 42, 0.8)",
             position: "relative",
-            margin: 16, // slight breathing space
+            margin: 16,
           }}
         >
           {/* Gold accent */}
@@ -204,13 +204,16 @@ export default function Dashboard() {
             }}
           />
 
+          {/* Updated Lindy iframe */}
           <iframe
             src={ALPHA_IFRAME_URL}
             width="100%"
             height="100%"
             title="Alpha Clinic Assistant"
+            allow="microphone"
             style={{
               border: "none",
+              borderRadius: "8px",
               display: "block",
             }}
           />
